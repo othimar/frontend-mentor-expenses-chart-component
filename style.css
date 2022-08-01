@@ -143,4 +143,5 @@ hr{
     position: absolute;
     padding: 5px 10px;
     font-weight: 700;
+    z-index:100;
 }
