@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <div class="top">
+        <div class="balance">
+          <div class="label-balance">My balance</div>
+          <div class="balance-amount">$921.48</div>
+        </div>
+        <img class="icon" alt="icon" src="./images/logo.svg">
+      </div>
+      <div class="card-body">
+        <h1>Spending - Last 7 days</h1>
+        <div id="chart"></div>
+        <hr>
+        <div class="bottom">
+          <div class="label-total">Total this month</div>
+          <div class="total-amount">$478.33</div>
+          <div class="percent">+2.4%</div>
+          <div class="label-last-month">from last month</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/othimar" target="_blank">Othimar</a>.
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

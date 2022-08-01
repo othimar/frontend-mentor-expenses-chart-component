@@ -1,0 +1,146 @@
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+
+    --small-text-size:12px;
+
+    --padding: 40px;
+    --border-radius: 32px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans";
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cream);
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    justify-self: end;
+}
+
+.top {
+    background-color: var(--soft-red);
+    padding: 32px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.balance-amount{
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.card-body {
+    background-color: var(--very-pale-orange);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+h1 {
+    color: var(--dark-brown);
+}
+
+hr{
+    color: var(--cream);
+}
+.bottom {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.label-total{
+    grid-area: 1 1;
+    color: var(--medium-brown);
+    font-size: var(--small-text-size);
+}
+.total-amount{
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-self: flex-end;
+
+    color: var(--dark-brown);
+    font-size: xx-large;
+    font-weight: 700;
+}
+.percent{
+    color: var(--dark-brown);
+    font-size: var(--small-text-size);
+    font-weight: 700;
+
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+}
+.label-last-month{
+    color: var(--medium-brown);
+    font-size: var(--small-text-size);
+
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+}
+
+#chart{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.bar-container{
+    display: flex;
+    flex-direction: column-reverse;
+    width: calc(100%/7);
+    padding: 5px;
+    position: relative;
+}
+.bar{
+    background-color: var(--soft-red);
+    border-radius: 5px;
+}
+.bar:hover{
+    filter: brightness(150%);
+    cursor: pointer;
+}
+.bar.current-day{
+    background-color: var(--cyan);
+}
+.bar-label{
+    color: var(--medium-brown);
+    font-size: 12px;
+    align-self: center;
+}
+.bar-container:hover > .tooltip{
+    visibility: visible;
+}
+.tooltip{
+    visibility: hidden;
+    background-color: var(--dark-brown);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: var(--small-text-size);
+    position: absolute;
+    padding: 5px 10px;
+    font-weight: 700;
+}
